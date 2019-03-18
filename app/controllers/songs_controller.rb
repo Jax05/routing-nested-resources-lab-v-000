@@ -14,12 +14,22 @@ class SongsController < ApplicationController
 
   def show
     # redirect if song is nil or if it doesn't belong to artist
-    @song = Song.find_by_id(params[:id])
+    # @song = Song.find_by_id(params[:id])
+    @artist = Artist.find_by_id(params[:artist_id])
 
-    if @song.nil?
-      redirect_to artist_songs_path(params[:artist_id])
-      flash[:alert] = "Song not found."
+    if params[:artist_id] && @artist
+      if @song = @artist.song.find_by_id(params[:id])
+        @song
+      else
+        redirect_to artist_songs_path(@artist)
+      end
+    else
+      @song = Song.find_by_id(params[:id])
     end
+    # if @song.nil?
+    #   redirect_to artist_songs_path(params[:artist_id])
+    #   flash[:alert] = "Song not found."
+    # end
   end
 
   def new
