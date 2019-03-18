@@ -11,8 +11,8 @@ class SongsController < ApplicationController
   end
 
   def show
-    @artist = Artist.find(params[:artist_id])
     @song = Song.find(params[:id])
+    @artist = @song.artist
 
   if !@artist.songs.includes(@song)
     redirect_to artist_songs_path(params[:artist_id])
