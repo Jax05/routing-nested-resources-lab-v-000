@@ -1472,3 +1472,8 @@ Processing by SongsController#index as HTML
 Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/artists/3/songs" for 184.186.4.59 at 2019-03-18 03:54:22 +0000
+Cannot render console from 184.186.4.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"3"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
