@@ -1307,3 +1307,9 @@ Processing by SongsController#show as HTML
 Completed 200 OK in 22ms (Views: 13.4ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/artists/3/songs/15" for 184.186.4.59 at 2019-03-18 02:57:16 +0000
+Cannot render console from 184.186.4.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/Jax05/routing-nested-resources-lab-v-000/app/controllers/songs_controller.rb:65: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:65: syntax error, unexpected end-of-input, expecting end
