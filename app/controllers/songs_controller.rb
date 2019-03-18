@@ -13,6 +13,7 @@ class SongsController < ApplicationController
   end
 
   def show
+    # redirect if song is nil or if it doesn't belong to artist
     @song = Song.find_by_id(params[:id])
 
     if @song.nil?
