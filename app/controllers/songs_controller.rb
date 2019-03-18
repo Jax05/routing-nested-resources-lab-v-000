@@ -18,6 +18,7 @@ class SongsController < ApplicationController
     redirect_to artist_songs_path(params[:artist_id])
     flash[:alert] = "Song not found."
   end
+  end
 
   def new
     @song = Song.new
